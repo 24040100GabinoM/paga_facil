@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paga Fácil — Licencias de Conducir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" />
+  <style>
+    /* Page-specific tweaks to fit the form flow */
+    .form-wrap {
+      max-width: 1000px;
+      margin: 28px auto;
+      padding: 0 24px 40px;
+    }
+    .step {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 16px;
+      background: linear-gradient(180deg, var(--card), rgba(16, 23, 34, 0.45));
+      box-shadow: var(--shadow);
+    }
+    .step-title {
+      font-family: Orbitron, Inter, sans-serif;
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 16px;
+    }
+    @media (max-width: 800px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .label {
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+    .input, .select, .textarea {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(10, 15, 22, 0.65);
+      color: var(--text-0);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .input:focus, .select:focus, .textarea:focus {
+      border-color: var(--neon);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.15) inset;
+      outline: none;
+    }
+    .note {
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+    .help-inline {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 12px 0 16px;
+      opacity: 0.6;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      border: 1px solid var(--border);
+      background: rgba(10, 15, 22, 0.5);
+      color: var(--text-0);
+      padding: 6px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+    .footer-mini {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px 24px;
+      color: var(--text-dim);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="header">
+    <div class="brand">
+      <span class="brand-icon">🚗</span>
+      <div>
+        <h1 class="brand-title">Licencias de Conducir</h1>
+        <p class="brand-subtitle">Trámite y pago en línea</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Volver al portal</a>
+      <a class="nav-link is-active" href="#">Licencias</a>
+      <a class="nav-link" href="#" aria-disabled="true">Asistencia</a>
+    </nav>
+  </header>
+
+  <main class="form-wrap">
+    <section class="step">
+      <h2 class="step-title">PASO 1) Llenar los datos que se solicitan</h2>
+
+      <div class="chips" aria-label="Tarjetas disponibles">
+        <span class="chip">Tarjeta “Mera Mera” Mejorada</span>
+        <span class="chip">Tarjeta “Campirana”</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label class="label" for="meraToken">Aplicar Tarjeta “Mera Mera” (7 dígitos)</label>
+          <div class="help-inline">
+            <input id="meraToken" class="input" type="text" maxlength="7" inputmode="numeric" placeholder="Ej. 1234567" />
+            <button class="btn btn-soft" type="button" disabled>Ayuda</button>
+          </div>
+          <p class="note">Si tu trámite es rechazado, valida tu tarjeta “Mera Mera”.</p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="campirana">Aplicar Tarjeta “Campirana” (sin espacios)</label>
+          <div class="help-inline">
+            <input id="campirana" class="input" type="text" placeholder="Ej. ABCD1234" />
+            <button class="btn btn-soft" type="button" disabled>Ayuda</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="nombres">Nombre(s)</label>
+          <input id="nombres" class="input" type="text" autocomplete="given-name" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="apPaterno">Apellido Paterno</label>
+          <input id="apPaterno" class="input" type="text" autocomplete="family-name" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="apMaterno">Apellido Materno</label>
+          <input id="apMaterno" class="input" type="text" autocomplete="additional-name" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="rfc">RFC</label>
+          <input id="rfc" class="input" type="text" placeholder="Ej. ABCD001122XYZ" />
+          <p class="note">Requisitos para CFDI v4.0.</p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="obs">Observaciones</label>
+          <textarea id="obs" class="textarea" rows="3" placeholder="Escribe una nota breve (opcional)"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="label" for="municipio">Municipio</label>
+          <select id="municipio" class="select">
+            <option value="">Selecciona</option>
+            <option>Saltillo</option>
+            <option>Torreón</option>
+            <option>Monclova</option>
+            <option>Piedras Negras</option>
+            <option>Ramos Arizpe</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="label" for="email">Correo electrónico</label>
+          <input id="email" class="input" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="telefono">Teléfono (10 dígitos)</label>
+          <input id="telefono" class="input" type="tel" inputmode="numeric" maxlength="10" placeholder="Ej. 8441234567" />
+        </div>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2 class="step-title">PASO 2) Selecciona tu licencia</h2>
+      <p class="note">Si tu licencia es de otro estado, marca “Primera Vez”.</p>
+
+      <div class="divider"></div>
+
+      <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
+        <article class="card">
+          <div class="card-icon">👤</div>
+          <h4 class="card-title">Chofer Particular</h4>
+          <p class="card-text">Uso no comercial.</p>
+          <button class="btn btn-outline" type="button">Seleccionar</button>
+        </article>
+        <article class="card">
+          <div class="card-icon">🏍️</div>
+          <h4 class="card-title">Motociclista</h4>
+          <p class="card-text">Motocicletas y similares.</p>
+          <button class="btn btn-outline" type="button">Seleccionar</button>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚌</div>
+          <h4 class="card-title">Servicio Público (Tipo B)</h4>
+          <p class="card-text">Transporte público.</p>
+          <button class="btn btn-outline" type="button">Seleccionar</button>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚕</div>
+          <h4 class="card-title">Redes de Transporte (Tipo D)</h4>
+          <p class="card-text">Plataformas digitales.</p>
+          <button class="btn btn-outline" type="button">Seleccionar</button>
+        </article>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="cta-row">
+        <button class="btn btn-soft" type="button" disabled>
+          DAR SEGUIMIENTO A UN TRÁMITE INCONCLUSO
+          <span class="btn-glow"></span>
+        </button>
+        <button class="btn btn-primary" type="button" id="generarPago">
+          Generar pago
+          <span class="btn-glow"></span>
+        </button>
+        <button class="btn btn-outline" type="button" id="cancelar">Cancelar</button>
+      </div>
+
+      <p class="note" style="margin-top:8px;">
+        Para Licencias del Servicio Público acude a la Subsecretaría de Transporte y Movilidad o Delegación Regional correspondiente.
+      </p>
+    </section>
+  </main>
+
+  <section class="footer-mini">
+    <button class="btn btn-danger" type="button" disabled>LLÁMANOS</button>
+    <div style="margin-top:8px;">CATT 070 • 800 506 3910 • 800 701 5131</div>
+    <div style="margin-top:8px; color:#6fa7c0;">
+      © 2025 Libramiento Óscar Flores Tapia Km 1.5 Arteaga, Coahuila, México
+    </div>
+  </section>
+
+  <script>
+    // Minimal front-end only behavior (no backend)
+    const cancelar = document.getElementById('cancelar');
+    const generarPago = document.getElementById('generarPago');
+
+    if (cancelar) {
+      cancelar.addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
+    }
+
+    if (generarPago) {
+      generarPago.addEventListener('click', () => {
+        alert('Demostración: se generaría el pago aquí (front-end sin backend).');
+      });
+    }
+  </script>
+  <script src="JS/licencia.js"></script>
+</body>
+</html>

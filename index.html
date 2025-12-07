@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paga Fácil Coahuila — Portal de pagos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="header">
+    <div class="brand">
+      <span class="brand-icon">⚡</span>
+      <div>
+        <h1 class="brand-title">Coahuila — Paga Fácil</h1>
+        <p class="brand-subtitle">Administración Fiscal General</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="nav-link" href="#"  aria-disabled="true">Opciones de pago</a>
+      <a class="nav-link" href="#" aria-disabled="true">Preguntas frecuentes</a>
+      <a class="nav-link" href="#" aria-disabled="true">Asistencia fiscal</a>
+      <a class="nav-link" href="#" aria-disabled="true">Aviso de privacidad</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2 class="hero-title">Bienvenido al portal de pagos en línea</h2>
+      <p class="hero-text">
+        Realiza tus trámites con seguridad y rapidez. Solo <strong>Licencias de Conducir</strong> está habilitado por el momento.
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" id="goLicencias">
+          Licencias de Conducir
+          <span class="btn-glow"></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="grid-section">
+      <h3 class="section-title">Pagos más comunes</h3>
+      <div class="grid">
+        <!-- Active Card -->
+        <article class="card card-active">
+          <div class="card-icon">🚗</div>
+          <h4 class="card-title">Licencias de Conducir</h4>
+          <p class="card-text">Trámite, renovación y pago de licencias.</p>
+          <button class="btn btn-outline" id="cardLicencias">
+            Iniciar trámite
+            <span class="btn-glow"></span>
+          </button>
+        </article>
+
+        <!-- Disabled Cards -->
+        <article class="card is-disabled">
+          <div class="card-icon">🚘</div>
+          <h4 class="card-title">Control Vehicular</h4>
+          <p class="card-text">Consulta adeudos, refrendos y certificaciones.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">📊</div>
+          <h4 class="card-title">Impuesto Sobre Nómina</h4>
+          <p class="card-text">Declaraciones y pagos de nómina.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">💰</div>
+          <h4 class="card-title">ISAN</h4>
+          <p class="card-text">Impuesto Sobre Adquisición de Inmuebles.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🏛️</div>
+          <h4 class="card-title">Instituto Registral Catastral</h4>
+          <p class="card-text">Registro y catastro de propiedades.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">📝</div>
+          <h4 class="card-title">Registro Civil</h4>
+          <p class="card-text">Actas y servicios registrales.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🏫</div>
+          <h4 class="card-title">Secretaría de Educación</h4>
+          <p class="card-text">Pagos y trámites educativos.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">⏳</div>
+          <h4 class="card-title">Continuar Trámite Inconcluso</h4>
+          <p class="card-text">Retoma tus trámites pendientes.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🚐</div>
+          <h4 class="card-title">Registro de Vehículos de Redes de Transporte</h4>
+          <p class="card-text">Registro para plataformas de transporte.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🍺</div>
+          <h4 class="card-title">Licencia de Alcoholes</h4>
+          <p class="card-text">Licencias para expendios de bebidas alcohólicas.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🖨️</div>
+          <h4 class="card-title">Imprimir Refrendo Vehicular con Firma Electrónica</h4>
+          <p class="card-text">Descarga tu refrendo firmado digitalmente.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🧾</div>
+          <h4 class="card-title">Imprimir Recibo de Pago</h4>
+          <p class="card-text">Descarga tus comprobantes de pago.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">📄</div>
+          <h4 class="card-title">Comprobante Fiscal Digital</h4>
+          <p class="card-text">Obtén tu comprobante fiscal digital.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🏫</div>
+          <h4 class="card-title">Colegios Particulares</h4>
+          <p class="card-text">Pagos relacionados con colegios privados.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🏠</div>
+          <h4 class="card-title">Bienes Inmuebles</h4>
+          <p class="card-text">Trámites de propiedades y bienes raíces.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">📋</div>
+          <h4 class="card-title">Bases de Licitación</h4>
+          <p class="card-text">Consulta bases y participa en licitaciones.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">✍️</div>
+          <h4 class="card-title">Notarías</h4>
+          <p class="card-text">Servicios notariales y certificaciones.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">⛏️</div>
+          <h4 class="card-title">Materiales Pétreos</h4>
+          <p class="card-text">Licencias y pagos de materiales pétreos.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🎨</div>
+          <h4 class="card-title">Secretaría de Cultura</h4>
+          <p class="card-text">Pagos y trámites culturales.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">💳</div>
+          <h4 class="card-title">Derechos ICAI</h4>
+          <p class="card-text">Pago de derechos ICAI.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🌾</div>
+          <h4 class="card-title">Desarrollo Rural</h4>
+          <p class="card-text">Trámites de desarrollo rural y ganadería.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🏗️</div>
+          <h4 class="card-title">Gestión Urbana</h4>
+          <p class="card-text">Trámites de planificación urbana.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">♻️</div>
+          <h4 class="card-title">Servicios de la Secretaría de Medio Ambiente</h4>
+          <p class="card-text">Pagos y trámites ambientales.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">📰</div>
+          <h4 class="card-title">Periódico Oficial</h4>
+          <p class="card-text">Consulta el periódico oficial.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">💼</div>
+          <h4 class="card-title">Deudores Diversos</h4>
+          <p class="card-text">Consulta y pago de deudas diversas.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">⚕️</div>
+          <h4 class="card-title">Secretaría de Salud</h4>
+          <p class="card-text">Pagos y trámites de salud.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🔐</div>
+          <h4 class="card-title">Seguridad Pública</h4>
+          <p class="card-text">Trámites de seguridad pública.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🔍</div>
+          <h4 class="card-title">Secretaría de Fiscalización</h4>
+          <p class="card-text">Servicios de fiscalización.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">⚖️</div>
+          <h4 class="card-title">Tribunal de Justicia Administrativa</h4>
+          <p class="card-text">Trámites ante el tribunal administrativo.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🚒</div>
+          <h4 class="card-title">Protección Civil</h4>
+          <p class="card-text">Trámites de protección civil.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">✈️</div>
+          <h4 class="card-title">Pasaportes</h4>
+          <p class="card-text">Trámites de expedición de pasaportes.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🏛️</div>
+          <h4 class="card-title">Otros Servicios SEGOB</h4>
+          <p class="card-text">Otros servicios de la Secretaría de Gobernación.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">📌</div>
+          <h4 class="card-title">Créditos Fiscales</h4>
+          <p class="card-text">Información de créditos fiscales.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🎪</div>
+          <h4 class="card-title">Centro de Convenciones</h4>
+          <p class="card-text">Reserva e información del centro de convenciones.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">📦</div>
+          <h4 class="card-title">Productos</h4>
+          <p class="card-text">Catálogo de productos y servicios.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🔨</div>
+          <h4 class="card-title">Servicios de la Fiscalía</h4>
+          <p class="card-text">Trámites y servicios de la Fiscalía General.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+        <article class="card is-disabled">
+          <div class="card-icon">🎫</div>
+          <h4 class="card-title">Tarjetón Servicio Público Particulares</h4>
+          <p class="card-text">Tramitación de tarjetones para servicios públicos.</p>
+          <button class="btn btn-outline" disabled>Próximamente</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="info-banners">
+      <div class="banner glass">
+        <h4 class="banner-title">¡Adiós a las filas!</h4>
+        <ul class="banner-list">
+          <li>Consulta tu adeudo</li>
+          <li>Imprime formato</li>
+          <li>Paga en línea</li>
+        </ul>
+      </div>
+      <div class="banner glass">
+        <h4 class="banner-title">Horarios y citas</h4>
+        <p>Consulta horarios y agenda en oficinas de recaudación.</p>
+        <button class="btn btn-soft" disabled>Ver disponibilidad</button>
+      </div>
+      <div class="banner glass">
+        <h4 class="banner-title">Asistencia por WhatsApp</h4>
+        <p>Escríbenos para orientación básica.</p>
+        <button class="btn btn-soft" disabled>Chatear</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-icon">⚙️</span>
+      <div>
+        <strong>Administración Fiscal General</strong>
+        <span class="foot-note">A Pasos de Gigante</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#" aria-disabled="true">Administraciones Locales</a>
+      <a href="#" aria-disabled="true">Asistencia Fiscal</a>
+      <a href="#" aria-disabled="true">Aviso de Privacidad</a>
+      <a href="#" aria-disabled="true">Términos y Condiciones</a>
+    </div>
+
+    <div class="footer-contact">
+      <button class="btn btn-danger" disabled>LLÁMANOS</button>
+      <ul class="contact-list">
+        <li>CATT 070</li>
+        <li>800 506 3910</li>
+        <li>800 701 5131</li>
+      </ul>
+    </div>
+    <div class="footer-copy">
+      © 2025 Libramiento Óscar Flores Tapia Km 1.5 Arteaga, Coahuila, México
+    </div>
+  </footer>
+
+  <script src="JS/licencia.js"></script>
+</body>
+</html>
